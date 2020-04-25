@@ -1,9 +1,9 @@
 import { createReducer } from '@reduxjs/toolkit';
-
+import {NAME,CLICK_BUTTON} from '../constants';
 
 export default createReducer({
-  name:"First",
+  [NAME]:"First",
 
 }, {
-  name: (state, { payload }) => {state.name = payload},
+  [NAME]: (state, { payload }) => {state[NAME] = payload},
 });

@@ -1,6 +1,7 @@
+import {NAME,CLICK_BUTTON} from '../constants';
 const clickButton = (payload) => (async (dispatch, getState) => {
-  dispatch({ type: 'name', payload:"Last" });
+  dispatch({ type: NAME, payload:"Last" });
 });
 export default {
-  clickButton,
+  [CLICK_BUTTON]:clickButton,
 };
