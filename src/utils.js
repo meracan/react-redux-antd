@@ -3,20 +3,20 @@ import actions from './actions';
 
 export const getStoreProps = (store, array) => {
   const obj = {};
-  array.forEach(({ storeID, props }) => {
-    props.forEach((prop) => {
-      if(store[storeID] && typeof store[storeID][prop]!=='undefined')
-        obj[prop] = store[storeID][prop]; 
-    });
+  array.forEach(({ store:storeId, prop }) => {
+    if(!store[storeId])return console.warn("StoreId=${storeId} does not exist");
+    if(!store[storeId][prop])return console.warn("prop=${prop} does not exist in store=${storeId}");
+    obj[prop]=store[storeId][prop];
   });
   return obj;
 };
 
-export const getDispatchProps = (dispatch, props) => {
+export const getDispatchProps = (dispatch, array) => {
   const obj = {};
-  props.forEach((prop) => {
-    const _f = actions[prop];
-    if (_f)obj[prop] = (obj) => dispatch(_f(obj));
+  array.forEach((actionId) => {
+    const _f = actions[actionId];
+    if(!_f)return console.warn("actionId=${actionId} does not exist");
+    obj[actionId] = (obj) => dispatch(_f(obj));
   });
   return obj;
 };

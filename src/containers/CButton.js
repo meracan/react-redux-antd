@@ -1,18 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {mergeProps,getStoreProps,getDispatchProps} from '../utils'
+import {mergeProps,getStoreProps,getDispatchProps} from '../utils';
 
-import Button,{Props} from '../components/Button.js';
+import Button,{Props,Actions} from '../components/Button.js';
 
-const props=new Set([...Props]);
-
-@connect(
-store => getStoreProps(store,[{storeID:'store1',props}]),
-dispatch => getDispatchProps(dispatch,Props),
-mergeProps
-)
-export default class C extends React.PureComponent {
-    render() {
-        return (<Button {...this.props}/>)
-    }
-}
+export default connect(
+  store => getStoreProps(store,new Set([...Props])),
+  dispatch => getDispatchProps(dispatch,new Set([...Actions])),
+  mergeProps,
+)(Button);

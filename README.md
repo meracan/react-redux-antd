@@ -40,8 +40,19 @@ Use `npm run test` to launch a simple express server. The application will be ru
 npm run analyze
 ```
 The analysis will be running on `http//localhost:8080`.
+
 #### Deploy to S3
 ```bash
 npm run deploy
 ```
 This will bundle packages and deploy to S3. The environment variable `AWS_BUCKET` needs to be specified.
+
+## Development Usage
+
+Rules:
+- All store and action variables are stored as [CONSTANTS](./constants.js).
+- All store and action variables should be unique throughout the application.
+- Containers are simple wrappers as shown in [CButton](./containers/CButton.js) or [CGroupButton](./containers/CGroupButton.js).
+- Components that use store and action variables needs to export `Props` and `Actions`, as shown in [Button](./components/Button.js).
+- Parent components need to include all child `Props` and `Actions`, as shiwn in [GroupButton](./components/GroupButton.js).
+- All async commands show be in `actions`
