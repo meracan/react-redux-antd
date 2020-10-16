@@ -1,9 +1,12 @@
-import {NAME,CLICK_BUTTON,CLICK_BUTTON2} from '../constants';
+import {NAME,NAME2,CLICK_BUTTON,CLICK_BUTTON2} from '../constants';
+
 const clickButton = (payload) => (async (dispatch, getState) => {
+  console.log(getState())
   dispatch({ type: NAME, payload:"Last" });
 });
 const clickButton2 = (payload) => (async (dispatch, getState) => {
-  dispatch({ type: NAME, payload:"Middle" });
+  console.log(getState())
+  dispatch({ type: NAME2, payload:"Middle" });
 });
 export default {
   [CLICK_BUTTON]:clickButton,

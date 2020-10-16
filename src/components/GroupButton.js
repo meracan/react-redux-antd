@@ -1,16 +1,20 @@
 import React from 'react';
-import Button,{ Props as ButtonProps,Actions as ButtonActions } from './Button';
-import {STORE1,NAME,TEAM,CLICK_BUTTON,CLICK_BUTTON2} from '../constants';
+import Button from './Button';
 
-export const Props = [...ButtonProps,{store:STORE1,prop:TEAM}];
-export const Actions = [...ButtonActions,CLICK_BUTTON2];
 export default class GroupButton extends React.PureComponent{
+  static defaultProps={
+    name1:"a",
+    name2:"a",
+    clickButton1:()=>null,
+    clickButton2:()=>null
+  };  
   render(){
-    
-    const {[TEAM]:team,[CLICK_BUTTON2]:clickButton2}=this.props;
-    return <div>
-      <Button {...this.props}/>  
-      <Button {...{[NAME]:team,[CLICK_BUTTON]:clickButton2}}/>
+    const {name1,name2,clickButton1,clickButton2}=this.props;
+    return (
+    <div>
+      <Button name={name1} clickButton={clickButton1}/>  
+      <Button name={name2} clickButton={clickButton2}/>  
     </div>
+    );
   }
 }

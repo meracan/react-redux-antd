@@ -53,6 +53,8 @@ Rules:
 - All store and action variables are stored as [CONSTANTS](./constants.js).
 - All store and action variables should be unique throughout the application.
 - Containers are simple wrappers as shown in [CButton](./containers/CButton.js) or [CGroupButton](./containers/CGroupButton.js).
-- Components that use store and action variables needs to export `Props` and `Actions`, as shown in [Button](./components/Button.js).
-- Parent components need to include all child `Props` and `Actions`, as shiwn in [GroupButton](./components/GroupButton.js).
-- All async commands show be in `actions`
+
+
+## Include Symlink project / local package
+Use `npm link ../{package}` and change add the path in `includes` in `webpack.config.js`.
+

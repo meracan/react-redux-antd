@@ -1,5 +1,9 @@
 # Manual Setup
 
+# Initialize react
+npx create-react-app
+# npm init
+
 
 # Basic environment package
 npm i -D dotenv esm faucet
@@ -9,16 +13,23 @@ npm i -D dotenv esm faucet
 npm i -D webpack webpack-cli webpack-dev-server 
 
 # Webpack extensions
-npm i -D html-webpack-plugin terser-webpack-plugin
+npm i -D html-webpack-plugin copy-webpack-plugin
+
+# Webpack extensions
+npm i -D terser-webpack-plugin 
 
 # Webpack loaders
-npm i -D css-loader style-loader url-loader react-hot-loader
+npm i -D css-loader style-loader url-loader 
 
 # Less
 npm i -D less less-loader
 
+# Webpack Loaders
+npm i -D react-hot-loader
+
+
 # Babel
-npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties @babel/plugin-proposal-decorators @babel/plugin-transform-runtime babel-plugin-import
+npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties @babel/plugin-proposal-decorators @babel/plugin-transform-runtime babel-plugin-import @babel/plugin-proposal-class-properties
 
 # Storybook
 npm i -D @storybook/react 
@@ -27,9 +38,9 @@ npm i -D @storybook/react
 npm i -D eslint eslint-loader babel-eslint eslint-plugin-react eslint-plugin-import eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-react-hooks
 
 # React
-npm i -S react react-dom react-router react-router-dom classnames prop-types @reduxjs/toolkit
+npm i -S react react-dom react-router react-router-dom classnames prop-types 
 # Redux
-npm i -S redux react-redux redux-logger redux-thunk
+npm i -S redux react-redux redux-logger redux-thunk @reduxjs/toolkit
 # AntD
 npm i -S antd enquire-js rc-queue-anim rc-scroll-anim
 
@@ -38,6 +49,13 @@ npm i -S dayjs
 
 # lodash, axios
 npm i -S lodash axios 
+
+# Fontawsome
+npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+
+# Cognito
+npm i -D json-loader
+npm i -S amazon-cognito-identity-js
 
 # Analyse production code
 npm i -D webpack-bundle-analyzer

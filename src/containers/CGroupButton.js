@@ -2,15 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {mergeProps,getStoreProps,getDispatchProps} from '../utils';
 
-import GroupButton,{Props,Actions} from '../components/GroupButton.js';
+import GroupButton from '../components/GroupButton.js';
 
-@connect(
-store => getStoreProps(store,new Set([...Props])),
-dispatch => getDispatchProps(dispatch,new Set([...Actions])),
-mergeProps
-)
-export default class C extends React.PureComponent {
-    render() {
-        return (<GroupButton {...this.props}/>);
-    }
-}
+import {STORE1,STORE2,NAME,NAME2,CLICK_BUTTON,CLICK_BUTTON2} from '../constants';
+
+export const Props = [
+  [STORE1,NAME,'name1'],
+  [STORE2,NAME2,'name2']
+  ];
+  
+export const Actions = [
+  [CLICK_BUTTON,'clickButton1'],
+  [CLICK_BUTTON2,'clickButton2'],
+  ];
+
+export default connect(
+  store => getStoreProps(store,GroupButton,Props),
+  dispatch => getDispatchProps(dispatch,GroupButton,Actions),
+  mergeProps,
+)(GroupButton);

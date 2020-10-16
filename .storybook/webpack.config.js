@@ -8,6 +8,7 @@ module.exports = {
       { test: /\.less$/,use: ['style-loader','css-loader','less-loader']},
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
       { test: /\.(png|jpg|gif|slf|mp4)$/,use: [{loader: 'file-loader',options: {}}]},
+      // { test: /\.json$/,loader: 'json-loader',},
       // { test: /\.md$/,use: [{ loader: "html-loader"},{loader: "markdown-loader",options: {}}]},
       // {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?mimetype=image/svg+xml'},
       {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
