@@ -34,7 +34,7 @@ export const getDispatchProps = (dispatch,_class, array) => {
   return obj;
 };
 
-export const mergeProps = (stateProps, dispatchProps, ownProps) => ({ ...stateProps,...dispatchProps, ...ownProps });
+export const mergeProps = (stateProps, dispatchProps, ownProps) => ({ ...ownProps,...stateProps,...dispatchProps  });
 
 export default {
   mergeProps,

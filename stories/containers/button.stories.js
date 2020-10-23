@@ -14,5 +14,9 @@ export default {
   component: Button,
 };
 
-const Template=(args) => <Provider store={store}><Button /> </Provider>;
-export const Primary = Template;
+const Template=(args) => <Provider store={store}><Button {...args} /> </Provider>;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  lastname:"LASTFROMSTORY"  
+};
