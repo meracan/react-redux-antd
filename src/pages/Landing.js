@@ -1,7 +1,7 @@
 import React from 'react';
 import {  Layout } from 'antd';
 
-import Button from '../containers/CButton.js';
+import Button from '../containers/Button.js';
 
 const {  Content } = Layout;
 

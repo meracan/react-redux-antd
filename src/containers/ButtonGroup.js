@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {mergeProps,getStoreProps,getDispatchProps} from '../utils';
 
-import GroupButton from '../components/GroupButton.js';
+import ButtonGroup from '../components/ButtonGroup.js';
 
 import {STORE1,STORE2,NAME,NAME2,CLICK_BUTTON,CLICK_BUTTON2} from '../constants';
 
@@ -17,7 +17,7 @@ export const Actions = [
   ];
 
 export default connect(
-  store => getStoreProps(store,GroupButton,Props),
-  dispatch => getDispatchProps(dispatch,GroupButton,Actions),
+  store => getStoreProps(store,ButtonGroup,Props),
+  dispatch => getDispatchProps(dispatch,ButtonGroup,Actions),
   mergeProps,
-)(GroupButton);
+)(ButtonGroup);

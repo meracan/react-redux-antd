@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {mergeProps,getStoreProps,getDispatchProps} from '../utils';
 
-import Button from '../components/Button.js';
+import {Button} from '../components';
 
 import {STORE1,NAME,CLICK_BUTTON} from '../constants';
 
@@ -12,8 +12,6 @@ export const Props = [
   
 export const Actions = [
   [CLICK_BUTTON,'clickButton'],
-  [CLICK_BUTTON,'clickButton3']
-  
   ];
 
 export default connect(

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-export default class GroupButton extends React.PureComponent{
+export default class ButtonGroup extends React.PureComponent{
   static defaultProps={
     name1:"a",
     name2:"a",
