@@ -1,21 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
-import {  Layout } from 'antd';
-
+import Provider from 'redux/provider';
+import CButton from 'components/CButton';
 
 import * as serviceWorker from './serviceWorker';
 
 
-class Router extends React.PureComponent {
+class Main extends React.PureComponent {
     render() {
-    return (<div></div>
-
-        );
+    return (
+      <Provider>
+        <CButton>
+        </CButton>
+      </Provider>
+      );
     }
 }
 
-ReactDOM.render(<Router />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

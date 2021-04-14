@@ -14,3 +14,4 @@ export const CLICKTHEME="CLICKTHEME";
       
 export const CLICK1="CLICK1";
 export const CLICK2="CLICK2";
+export const CLICKLNG="CLICKLNG";
