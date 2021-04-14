@@ -17,7 +17,13 @@ module.exports = {
     // 'PRODUCTION' is used when building the static version of storybook.
 
     // Make whatever fine-grained changes you need
-    config.module.rules.push({ test: /\.less$/,use: ['style-loader','css-loader','less-loader']});
+    // config.module.rules.push({ test: /\.less$/,use: ['style-loader','css-loader','less-loader']});
+    
+     config.resolve.modules = [
+    ...(config.resolve.modules || []),
+    path.resolve('./src'),
+    ];
+    
 
     // Return the altered config
     return config;

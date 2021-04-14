@@ -11,6 +11,7 @@ To pick and choose certain packages, please reference to `setup.sh`.
 ## Usage
 The application is bundled using [Webpack](https://webpack.js.org/) during development and production. 
 The purpose of webpack is to bundle modules for JavaScript and to transform front-end assets like HTML, CSS, and images.
+
 #### Development
 ```bash
 npm start
@@ -55,6 +56,5 @@ Rules:
 - Containers are simple wrappers as shown in [CButton](./containers/CButton.js) or [CGroupButton](./containers/CGroupButton.js).
 
 
-## Include Symlink project / local package
-Use `npm link ../{package}` and change add the path in `includes` in `webpack.config.js`.
+
 

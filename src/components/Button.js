@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'antd';
-import './style.less';
-
 
 export default class MyButton extends React.PureComponent {
   static propTypes = {

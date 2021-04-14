@@ -1,6 +1,5 @@
 import React from 'react';
-import {Button} from '../../src/components';
-
+import {Button} from 'components';
 
 
 export default {
@@ -14,10 +13,3 @@ export const Primary = Template.bind({});
 Primary.args = {
   
 };
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  
-};
-
-

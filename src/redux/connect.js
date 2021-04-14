@@ -1,5 +1,4 @@
-
-import actions from './actions';
+import actions from './actions.js';
 
 export const getStoreProps = (store,_class, array) => {
   const obj = {};
