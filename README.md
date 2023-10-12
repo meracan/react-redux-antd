@@ -17,14 +17,14 @@ The purpose of webpack is to bundle modules for JavaScript and to transform fron
 npm start
 ```
 The storybook website will be on: `https//localhost:8080`. Modify `package.json` to change the port.
-The configuration files for storybook, such as webpack configuration file, is localed under `./.storybook`.
+The configuration files for storybook, such as webpack configuration file, is located under `./.storybook`.
 The stories are located `./stories`.
 
 #### Production
 ```bash
 npm run build
 ```
-Webpack will use `webpack.config.js` to bunlde packages. 
+Webpack will use `webpack.config.js` to bundle packages. 
 The environment variable `TITLE` is used set the title of the application.
 The entry/main JavaScript is under `./src/index.js`.
 
